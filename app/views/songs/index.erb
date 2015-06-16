@@ -1,0 +1,17 @@
+<h1 class="center">Songs</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <% @songs.each do |song| %>
+      <div class="song text-center">
+        <h3><a href="/songs/<%= song.id %>"><%= song.title %></a> <small>(by: <%= song.author %>)</small></h3>
+        <p>
+          <%= song.url %>
+        </p>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
